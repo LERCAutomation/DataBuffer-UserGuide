@@ -1,4 +1,5 @@
 User Guide
 ==========
 
-User Guide for the Data Buffer Tool.
+User Guide for the Data Buffer tool (<https://github.com/LERCAutomation/DataBuffer-MapInfo>
+).

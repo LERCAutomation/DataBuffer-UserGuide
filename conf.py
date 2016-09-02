@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Data Buffer User Guide'
-copyright = u'2016 GiGL, TVERC, SxBRC'
+copyright = u'2016 TVERC'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -203,7 +203,7 @@ latex_elements = {
 #  author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'DataBuffer-UserGuide.tex', u'Data Buffer - User Guide',
-   u'Andy Foy & Hester Lyons', 'manual'),
+   u'Andy Foy', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -218,7 +218,7 @@ latex_logo = 'icons/Logo.png'
 latex_show_pagerefs = True
 
 # If true, show URL addresses after external links.
-latex_show_urls = False
+latex_show_urls = 'footnote'
 
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
@@ -233,7 +233,7 @@ latex_show_urls = False
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'Data Buffer-UserGuide', u'Data Buffer - User Guide',
-     [u'Andy Foy & Hester Lyons'], 1)
+     [u'Andy Foy'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -247,7 +247,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'DataBuffer-UserGuide', u'Data Buffer - User Guide',
-   u'Andy Foy & Hester Lyons', 'DataBuffer-UserGuide', 'Data Buffer - User Guide.',
+   u'Andy Foy', 'DataBuffer-UserGuide', 'Data Buffer - User Guide.',
    'Miscellaneous'),
 ]
 
@@ -262,3 +262,6 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+# -- Added by Andy --------
+numfig = True
