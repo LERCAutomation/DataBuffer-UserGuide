@@ -113,7 +113,7 @@ SortOrder
 	A comma-separated list of columns indicating the order the data should be selected from this layer. The column names (not case sensitive) should match the column names in the source table.
 
 	.. note::
-		The order of the records may be important when it comes to identifying records with the same ``key`` attributes (e.g. species name(s), grid reference, location name). Hence it is recommended that the key attribute columns are specified in the sort order.
+		The order of the records may be important when it comes to identifying records with the same **key** attributes (e.g. species name(s), grid reference, location name). Hence it is recommended that the key attribute columns are specified in the sort order.
 
 BufferSize
 	The size of the buffer (in metres) to apply to records before being added to the output layer. A value of 0 (zero) indicates that the records will not be buffered for this input layer.
@@ -122,7 +122,7 @@ DissolveSize
 	The proximity (in metres) of records that are to be dissolved together. Records within this distance of each other will be dissolved together when output to form a single contiguous area. A value of 0 (zero) indicates that the records should not be dissolved.
 
 	.. note::
-		Even if records are not dissolved (either because they are not within the specified distance of each other or because the value is 0) they may be combined together if their ``key`` attributes are the same.
+		Even if records are not dissolved (either because they are not within the specified distance of each other or because the value is 0) they may be combined together if their **key** attributes are the same.
 
 
 .. index::
@@ -154,7 +154,7 @@ Columns
 		The type of column (and how it should be processed) for the output layer. The options are:
 
 			Key
-				Indicates that the column is a ``Key`` column. Only records with the same values for **all** key columns will be combined or dissolved. Values in the column will be written 'as is' to the output layer.
+				Indicates that the column is a **Key** column. Only records with the same values for **all** key columns will be combined or dissolved. Values in the column will be written 'as is' to the output layer.
 			Cluster
 				If records are to be clustered for the input layer (i.e. ``DissolveSize > 0``) then the most common value in this column will written to the output layer. Otherwise values in the column will be written 'as is' to the output layer.
 			First
@@ -162,11 +162,11 @@ Columns
 			Common
 				The most common value in this column, for records with the same key columns, will be written to the output layer. This is useful when values may vary for the same key column values (e.g. the location name when the grid reference is used as a key column).
 			Min
-				The minimum value in this column, for records with the same key columns, will be written to the output layer separated by `` - ``. This is useful for numeric columns such as abundance counts or recorded years.
+				The minimum value in this column, for records with the same key columns, will be written to the output layer separated by " - ". This is useful for numeric columns such as abundance counts or recorded years.
 			Max
-				The maximum value in this column, for records with the same key columns, will be written to the output layer separated by `` - ``. This is useful for numeric columns such as abundance counts or recorded years.
+				The maximum value in this column, for records with the same key columns, will be written to the output layer separated by " - ". This is useful for numeric columns such as abundance counts or recorded years.
 			Range
-				The range of values in this column, for records with the same key columns, are written to the output layer separated by `` - ``. This is useful for numeric columns such as abundance counts or recorded years (e.g. ``1986 - 1988``).
+				The range of values in this column, for records with the same key columns, are written to the output layer separated by " - ". This is useful for numeric columns such as abundance counts or recorded years (e.g. ``1986 - 1988``).
 
 
 Symbology
@@ -184,7 +184,7 @@ Symbology
 		The style to be used for the symbol infill. This attribute applies to ``Region`` objects.
 
 	.. tip::
-		In order to find the syntax for the Pen and Brush attribute, set the desired symbol for a polygon (region) layer through **Options => Region style**, then write the following statement in the MapBasic window and hit enter: ``Print CurrentBorderPen()``. The printed pen definition (e.g. ``2,2,10526880``) can be used in the ``Pen`` attribute.  Repeat with ``Print CurrentBrush()``.
+		In order to find the syntax for the Pen and Brush attribute, set the desired symbol for a polygon (region) layer through **Options => Region style**, then write ``Print CurrentBorderPen()`` in the MapBasic window and hit enter. The printed pen definition (e.g. ``2,2,10526880``) can be used in the ``Pen`` attribute.  Repeat with ``Print CurrentBrush()``.
 
 
 .. raw:: latex

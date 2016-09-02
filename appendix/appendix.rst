@@ -8,321 +8,319 @@ Appendix
 Example XML file
 ================
 
-Below is an example of XML that might be used to set up the Data Buffer tool for
-MapInfo. Note, many of the settings have been included for illustration only and
-it is up to each user or LERC to ensure the system is configured to their
-requirements.
+Below is an example of XML that might be used to set up the Data Buffer tool for MapInfo. Note, many of the settings have been included for illustration only and it is up to each user or LERC to ensure the system is configured to their requirements.
 
 ::
 
-<?xml version="1.0" encoding="utf-8"?>
+    <?xml version="1.0" encoding="utf-8"?>
 
-<!--
-WARNING: This file should be changed carefully and a backup should be
-taken before any changes so that they can be backed out.  Changed lines
-can also be commented out as below.
--->
+    <!--
+    WARNING: This file should be changed carefully and a backup should be
+    taken before any changes so that they can be backed out.  Changed lines
+    can also be commented out as below.
+    -->
 
-<!--
-This config file contains all the variables used by the DataExtractor
-MapBasic tool.
+    <!--
+    This config file contains all the variables used by the DataExtractor
+    MapBasic tool.
 
-The 'configuration' node is the 'root' node and signifies the start of the
-contents of the configuration file.
+    The 'configuration' node is the 'root' node and signifies the start of the
+    contents of the configuration file.
 
-The 'DataBuffer' node contains all of the entries relating to the
-MapBasic tool variables.
+    The 'DataBuffer' node contains all of the entries relating to the
+    MapBasic tool variables.
 
-Each entry relates to a file, folder, table name, column name or variable
-used by the MapBasic tool to buffer and combine data for the buffered species
-layers.
--->
+    Each entry relates to a file, folder, table name, column name or variable
+    used by the MapBasic tool to buffer and combine data for the buffered
+    species layers.
+    -->
 
-<configuration>
-<DataBuffer>
+    <configuration>
+    <DataBuffer>
 
-  <!-- The title to use for the program in the Tool menu -->
-  <ToolTitle>
-  <value>Data Extractor - Partners</value>
-  </ToolTitle>
+      <!-- The title to use for the program in the Tool menu -->
+      <ToolTitle>
+      <value>Data Extractor - Partners</value>
+      </ToolTitle>
 
-  <!-- The existing file location where log files will be saved with output
-       messages -->
-  <LogFilePath>
-  <value>D:\Andy\TVERC\Data Buffer\Logs</value>
-  </LogFilePath>
+      <!-- The existing file location where log files will be saved with output
+           messages -->
+      <LogFilePath>
+      <value>D:\Andy\TVERC\Data Buffer\Logs</value>
+      </LogFilePath>
 
-  <!-- The existing file location where the new GIS layer will be created -->
-  <DefaultPath>
-  <value>D:\Andy\TVERC\Data Buffer</value>
-  </DefaultPath>
+      <!-- The existing file location where the new GIS layer will be created -->
+      <DefaultPath>
+      <value>D:\Andy\TVERC\Data Buffer</value>
+      </DefaultPath>
 
-  <!-- The names and local names of the tables to be processed -->
-  <InTables>
-  <Badgers>
-    <TableName>
-      <Value>Badgers</Value>
-    </TableName>
-    <Columns>
-      <Value>CommonName, SciName, RecYear, GridRef, Location, Design, RecYear
-             "FirstYear", RecYear "LastYear", RecYear "RecCount"</Value>
-    </Columns>
-    <WhereClause>
-      <value>RecYear &gt; (Year(CurDateTime()) - 11)</value>
-    </WhereClause>
-    <SortOrder>
-      <Value>SciName, GridRef, Location</Value>
-    </SortOrder>
-    <BufferSize>
-      <Value>100</Value>
-    </BufferSize>
-    <DissolveSize>
-      <Value>0</Value>
-    </DissolveSize>
-  </Badgers>
-  <BarnOwls>
-    <TableName>
-      <Value>Barn_Owls</Value>
-    </TableName>
-    <Columns>
-      <Value>CommonName, SciName, RecYear, GridRef, Location, Design, RecYear
-             "FirstYear", RecYear "LastYear", RecYear "RecCount"</Value>
-    </Columns>
-    <WhereClause>
-      <value>RecYear &gt; (Year(CurDateTime()) - 11)</value>
-    </WhereClause>
-    <SortOrder>
-      <Value>SciName, GridRef, Location</Value>
-    </SortOrder>
-    <BufferSize>
-      <Value>100</Value>
-    </BufferSize>
-    <DissolveSize>
-      <Value>0</Value>
-    </DissolveSize>
-  </BarnOwls>
-  <Bats>
-    <TableName>
-      <Value>Bats</Value>
-    </TableName>
-    <Columns>
-      <Value>CommonName, SciName, RecYear, GridRef, Location, Design, RecYear
-             "FirstYear", RecYear "LastYear", RecYear "RecCount"</Value>
-    </Columns>
-    <WhereClause>
-      <value>RecYear &gt; (Year(CurDateTime()) - 11)</value>
-    </WhereClause>
-    <SortOrder>
-      <Value>SciName, GridRef, Location</Value>
-    </SortOrder>
-    <BufferSize>
-      <Value>100</Value>
-    </BufferSize>
-    <DissolveSize>
-      <Value>0</Value>
-    </DissolveSize>
-  </Bats>
-  <Dormice>
-    <TableName>
-      <Value>Dormice</Value>
-    </TableName>
-    <Columns>
-      <Value>CommonName, SciName, RecYear, GridRef, Location, Design, RecYear
-             "FirstYear", RecYear "LastYear", RecYear "RecCount"</Value>
-    </Columns>
-    <WhereClause>
-      <value>RecYear &gt; (Year(CurDateTime()) - 11)</value>
-    </WhereClause>
-    <SortOrder>
-      <Value>SciName, GridRef, Location</Value>
-    </SortOrder>
-    <BufferSize>
-      <Value>100</Value>
-    </BufferSize>
-    <DissolveSize>
-      <Value>100</Value>
-    </DissolveSize>
-  </Dormice>
-  <GCNs>
-    <TableName>
-      <Value>GCNs</Value>
-    </TableName>
-    <Columns>
-      <Value>CommonName, SciName, RecYear, GridRef, Location, Design, RecYear
-             "FirstYear", RecYear "LastYear", RecYear "RecCount"</Value>
-    </Columns>
-    <WhereClause>
-      <value>RecYear &gt; (Year(CurDateTime()) - 11)</value>
-    </WhereClause>
-    <SortOrder>
-      <Value>SciName, GridRef, Location</Value>
-    </SortOrder>
-    <BufferSize>
-      <Value>100</Value>
-    </BufferSize>
-    <DissolveSize>
-      <Value>0</Value>
-    </DissolveSize>
-  </GCNs>
-  <WaterVoles>
-    <TableName>
-      <Value>Water_Voles</Value>
-    </TableName>
-    <Columns>
-      <Value>CommonName, SciName, RecYear, GridRef, Location, Design, RecYear
-             "FirstYear", RecYear "LastYear", RecYear "RecCount"</Value>
-    </Columns>
-    <WhereClause>
-      <value>RecYear &gt; (Year(CurDateTime()) - 11)</value>
-    </WhereClause>
-    <SortOrder>
-      <Value>SciName, GridRef, Location</Value>
-    </SortOrder>
-    <BufferSize>
-      <Value>20</Value>
-    </BufferSize>
-    <DissolveSize>
-      <Value>20</Value>
-    </DissolveSize>
-  </WaterVoles>
-  </InTables>
+      <!-- The names and local names of the tables to be processed -->
+      <InTables>
+      <Badgers>
+        <TableName>
+          <Value>Badgers</Value>
+        </TableName>
+        <Columns>
+          <Value>CommonName, SciName, RecYear, GridRef, Location, Design,
+                 RecYear "FirstYear", RecYear "LastYear", RecYear "RecCount"
+                 </Value>
+        </Columns>
+        <WhereClause>
+          <value>RecYear &gt; (Year(CurDateTime()) - 11)</value>
+        </WhereClause>
+        <SortOrder>
+          <Value>SciName, GridRef, Location</Value>
+        </SortOrder>
+        <BufferSize>
+          <Value>100</Value>
+        </BufferSize>
+        <DissolveSize>
+          <Value>0</Value>
+        </DissolveSize>
+      </Badgers>
+      <BarnOwls>
+        <TableName>
+          <Value>Barn_Owls</Value>
+        </TableName>
+        <Columns>
+          <Value>CommonName, SciName, RecYear, GridRef, Location, Design, RecYear
+                 "FirstYear", RecYear "LastYear", RecYear "RecCount"</Value>
+        </Columns>
+        <WhereClause>
+          <value>RecYear &gt; (Year(CurDateTime()) - 11)</value>
+        </WhereClause>
+        <SortOrder>
+          <Value>SciName, GridRef, Location</Value>
+        </SortOrder>
+        <BufferSize>
+          <Value>100</Value>
+        </BufferSize>
+        <DissolveSize>
+          <Value>0</Value>
+        </DissolveSize>
+      </BarnOwls>
+      <Bats>
+        <TableName>
+          <Value>Bats</Value>
+        </TableName>
+        <Columns>
+          <Value>CommonName, SciName, RecYear, GridRef, Location, Design, RecYear
+                 "FirstYear", RecYear "LastYear", RecYear "RecCount"</Value>
+        </Columns>
+        <WhereClause>
+          <value>RecYear &gt; (Year(CurDateTime()) - 11)</value>
+        </WhereClause>
+        <SortOrder>
+          <Value>SciName, GridRef, Location</Value>
+        </SortOrder>
+        <BufferSize>
+          <Value>100</Value>
+        </BufferSize>
+        <DissolveSize>
+          <Value>0</Value>
+        </DissolveSize>
+      </Bats>
+      <Dormice>
+        <TableName>
+          <Value>Dormice</Value>
+        </TableName>
+        <Columns>
+          <Value>CommonName, SciName, RecYear, GridRef, Location, Design, RecYear
+                 "FirstYear", RecYear "LastYear", RecYear "RecCount"</Value>
+        </Columns>
+        <WhereClause>
+          <value>RecYear &gt; (Year(CurDateTime()) - 11)</value>
+        </WhereClause>
+        <SortOrder>
+          <Value>SciName, GridRef, Location</Value>
+        </SortOrder>
+        <BufferSize>
+          <Value>100</Value>
+        </BufferSize>
+        <DissolveSize>
+          <Value>100</Value>
+        </DissolveSize>
+      </Dormice>
+      <GCNs>
+        <TableName>
+          <Value>GCNs</Value>
+        </TableName>
+        <Columns>
+          <Value>CommonName, SciName, RecYear, GridRef, Location, Design, RecYear
+                 "FirstYear", RecYear "LastYear", RecYear "RecCount"</Value>
+        </Columns>
+        <WhereClause>
+          <value>RecYear &gt; (Year(CurDateTime()) - 11)</value>
+        </WhereClause>
+        <SortOrder>
+          <Value>SciName, GridRef, Location</Value>
+        </SortOrder>
+        <BufferSize>
+          <Value>100</Value>
+        </BufferSize>
+        <DissolveSize>
+          <Value>0</Value>
+        </DissolveSize>
+      </GCNs>
+      <WaterVoles>
+        <TableName>
+          <Value>Water_Voles</Value>
+        </TableName>
+        <Columns>
+          <Value>CommonName, SciName, RecYear, GridRef, Location, Design, RecYear
+                 "FirstYear", RecYear "LastYear", RecYear "RecCount"</Value>
+        </Columns>
+        <WhereClause>
+          <value>RecYear &gt; (Year(CurDateTime()) - 11)</value>
+        </WhereClause>
+        <SortOrder>
+          <Value>SciName, GridRef, Location</Value>
+        </SortOrder>
+        <BufferSize>
+          <Value>20</Value>
+        </BufferSize>
+        <DissolveSize>
+          <Value>20</Value>
+        </DissolveSize>
+      </WaterVoles>
+      </InTables>
 
-  <!-- The details of the new GIS layer to be created -->
-  <OutTable>
+      <!-- The details of the new GIS layer to be created -->
+      <OutTable>
 
-  <!-- A comma-delimited list of the column headings, and their data
-       types/lengths, that the output GIS layer should have -->
-  <ColumnDefs>
-    <Value>CommonName Char(100), SciName Char(100), RecYear Char(11), GridRef
-           Char(12), Location Char(100), Status Char(100), FirstYear Char(4),
-           LastYear Char(4), RecCount Integer</Value>
-  </ColumnDefs>
+      <!-- A comma-delimited list of the column headings, and their data
+           types/lengths, that the output GIS layer should have -->
+      <ColumnDefs>
+        <Value>CommonName Char(100), SciName Char(100), RecYear Char(11), GridRef
+               Char(12), Location Char(100), Status Char(100), FirstYear Char(4),
+               LastYear Char(4), RecCount Integer</Value>
+      </ColumnDefs>
 
-  <!-- The coordinate system for the output GIS layer -->
-  <CoordinateSystem>
-    <value>Earth Projection 8, 79, "m", -2, 49, 0.9996012717, 400000,
-           -100000</value>
-  </CoordinateSystem>
-  
-  <!-- The columns in the new GIS layer and how they will be created -->
-  <Columns>
-    <Col1>
-      <ColumnName>
-        <value>CommonName</value>
-      </ColumnName>
-      <ColumnType>
-        <value>Key</value>
-      </ColumnType>
-    </Col1>
-    <Col2>
-      <ColumnName>
-        <value>SciName</value>
-      </ColumnName>
-      <ColumnType>
-        <value>Key</value>
-      </ColumnType>
-    </Col2>
-    <Col3>
-      <ColumnName>
-        <value>Date</value>
-      </ColumnName>
-      <ColumnType>
-        <value>Range</value>
-      </ColumnType>
-    </Col3>
-    <Col4>
-      <ColumnName>
-        <value>GridRef</value>
-      </ColumnName>
-      <ColumnType>
-        <value>Cluster</value>
-      </ColumnType>
-    </Col4>
-    <Col5>
-      <ColumnName>
-        <value>Location</value>
-      </ColumnName>
-      <ColumnType>
-        <value>Common</value>
-      </ColumnType>
-    </Col5>
-    <Col6>
-      <ColumnName>
-        <value>Status</value>
-      </ColumnName>
-      <ColumnType>
-        <value>First</value>
-      </ColumnType>
-    </Col6>
-    <Col7>
-      <ColumnName>
-        <value>FirstYear</value>
-      </ColumnName>
-      <ColumnType>
-        <value>Min</value>
-      </ColumnType>
-    </Col7>
-    <Col8>
-      <ColumnName>
-        <value>LastYear</value>
-      </ColumnName>
-      <ColumnType>
-        <value>Max</value>
-      </ColumnType>
-    </Col8>
-    <Col9>
-      <ColumnName>
-        <value>RecCount</value>
-      </ColumnName>
-      <ColumnType>
-        <value>Count</value>
-      </ColumnType>
-    </Col9>
-  </Columns>
+      <!-- The coordinate system for the output GIS layer -->
+      <CoordinateSystem>
+        <value>Earth Projection 8, 79, "m", -2, 49, 0.9996012717, 400000,
+               -100000</value>
+      </CoordinateSystem>
+      
+      <!-- The columns in the new GIS layer and how they will be created -->
+      <Columns>
+        <Col1>
+          <ColumnName>
+            <value>CommonName</value>
+          </ColumnName>
+          <ColumnType>
+            <value>Key</value>
+          </ColumnType>
+        </Col1>
+        <Col2>
+          <ColumnName>
+            <value>SciName</value>
+          </ColumnName>
+          <ColumnType>
+            <value>Key</value>
+          </ColumnType>
+        </Col2>
+        <Col3>
+          <ColumnName>
+            <value>Date</value>
+          </ColumnName>
+          <ColumnType>
+            <value>Range</value>
+          </ColumnType>
+        </Col3>
+        <Col4>
+          <ColumnName>
+            <value>GridRef</value>
+          </ColumnName>
+          <ColumnType>
+            <value>Cluster</value>
+          </ColumnType>
+        </Col4>
+        <Col5>
+          <ColumnName>
+            <value>Location</value>
+          </ColumnName>
+          <ColumnType>
+            <value>Common</value>
+          </ColumnType>
+        </Col5>
+        <Col6>
+          <ColumnName>
+            <value>Status</value>
+          </ColumnName>
+          <ColumnType>
+            <value>First</value>
+          </ColumnType>
+        </Col6>
+        <Col7>
+          <ColumnName>
+            <value>FirstYear</value>
+          </ColumnName>
+          <ColumnType>
+            <value>Min</value>
+          </ColumnType>
+        </Col7>
+        <Col8>
+          <ColumnName>
+            <value>LastYear</value>
+          </ColumnName>
+          <ColumnType>
+            <value>Max</value>
+          </ColumnType>
+        </Col8>
+        <Col9>
+          <ColumnName>
+            <value>RecCount</value>
+          </ColumnName>
+          <ColumnType>
+            <value>Count</value>
+          </ColumnType>
+        </Col9>
+      </Columns>
 
-  <!-- The symbology to apply to the new GIS layer -->
-  <Symbology>
-    <Points>
-      <Clause>
-        <Value></Value>
-      </Clause>
-      <Object>
-        <Value>Point</Value>
-      </Object>
-      <Symbol>
-        <Value>137,255,12, "MapInfo Miscellaneous",256,0</Value>
-      </Symbol>
-    </Points>
-    <Lines>
-      <Clause>
-        <Value></Value>
-      </Clause>
-      <Object>
-        <Value>Line</Value>
-      </Object>
-      <Pen>
-        <Value>2,2,10526880</Value>
-      </Pen>
-    </Lines>
-    <Regions>
-      <Clause>
-        <Value></Value>
-      </Clause>
-      <Object>
-        <Value>Region</Value>
-      </Object>
-      <Pen>
-        <Value>2,2,10526880</Value>
-      </Pen>
-      <Brush>
-        <Value>5,10526880</Value>
-      </Brush>
-    </Regions>
-  </Symbology>
-  </OutTable>
+      <!-- The symbology to apply to the new GIS layer -->
+      <Symbology>
+        <Points>
+          <Clause>
+            <Value></Value>
+          </Clause>
+          <Object>
+            <Value>Point</Value>
+          </Object>
+          <Symbol>
+            <Value>137,255,12, "MapInfo Miscellaneous",256,0</Value>
+          </Symbol>
+        </Points>
+        <Lines>
+          <Clause>
+            <Value></Value>
+          </Clause>
+          <Object>
+            <Value>Line</Value>
+          </Object>
+          <Pen>
+            <Value>2,2,10526880</Value>
+          </Pen>
+        </Lines>
+        <Regions>
+          <Clause>
+            <Value></Value>
+          </Clause>
+          <Object>
+            <Value>Region</Value>
+          </Object>
+          <Pen>
+            <Value>2,2,10526880</Value>
+          </Pen>
+          <Brush>
+            <Value>5,10526880</Value>
+          </Brush>
+        </Regions>
+      </Symbology>
+      </OutTable>
 
-</DataBuffer>
-</configuration>
+    </DataBuffer>
+    </configuration>
 
 
 

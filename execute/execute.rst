@@ -138,7 +138,7 @@ You can now repeat the process for different input files if required.
 Output results
 ==============
 
-The output records are saved in the GIS layer specified by the user when the tool was run. :numref:`figResults` shows an example of an output layer with some records ``clustered`` because they are from the same input layer, have the same key column values are within the specified distance of each other.
+The output records are saved in the GIS layer specified by the user when the tool was run. :numref:`figResults` shows an example of an output layer with some records **clustered** because they are from the same input layer, have the same key column values and are within the specified distance of each other.
 
 .. _figResults:
 
