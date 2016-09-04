@@ -21,7 +21,7 @@ Below is an example of XML that might be used to set up the Data Buffer tool for
     -->
 
     <!--
-    This config file contains all the variables used by the DataExtractor
+    This config file contains all the variables used by the DataBuffer
     MapBasic tool.
 
     The 'configuration' node is the 'root' node and signifies the start of the
@@ -40,7 +40,7 @@ Below is an example of XML that might be used to set up the Data Buffer tool for
 
       <!-- The title to use for the program in the Tool menu -->
       <ToolTitle>
-      <value>Data Extractor - Partners</value>
+      <value>Data Buffer</value>
       </ToolTitle>
 
       <!-- The existing file location where log files will be saved with output
