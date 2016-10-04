@@ -15,7 +15,7 @@ Users
 
 This user guide assumes that users of the Data Buffer tool have:
 
-* General IT experience including use of Microsoft Windows.
+* General IT experience including the use of Microsoft Windows.
 * Experience in the use of a relevant GIS application supported by the tool (currently MapInfo), including selecting and querying features and attributes.
 * An understanding of the datasets that are used by the Data Buffer tool.
 

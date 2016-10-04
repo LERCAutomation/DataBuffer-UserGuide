@@ -10,11 +10,11 @@ Background
 
 Many LERCs will generate GIS layers containing details of records they hold of protected, notable and/or invasive non-native species. These GIS layers can be useful for many partner organisations such as local planning authorities, nature conservation bodies and utility companies. However, sometimes the overwhelming quantity of records means there may be too many records to identify 'hotspots' or areas where species may be impacted by upcoming development pressure or ground works.
 
-Supplying partner organisations with information relating to a smaller set of species will reduce the number of records, which may help to identify where any given species has been recorded. However, even with just a handful of species it can be hard to determine potential species disturbance when species have different levels of mobility and ranges. One approach is to provide species 'alert' layers by buffering each record's location with an area related to their mobility or according to planning guidance. Unfortunately, making the spatial location of the records larger can only make analysis even worse as neighbouring records may overlap one-another and records at the same location will be stacked on top of each other.
+Supplying partner organisations with information relating to a smaller set of species will reduce the number of records, which may help to identify where any given species has been recorded. However, even with just a handful of species it can be hard to determine potential species disturbance when species have different levels of mobility and ranges. One approach is to provide species 'alert' layers by buffering each record's location with an area related to their mobility or according to planning guidance. Unfortunately, making the spatial range of the records larger can only make analysis even worse as neighbouring records may overlap one another and records at the same location will be stacked on top of each other.
 
 A simple idea is to reduce the number of multiple 'stacked' records by **combining** records for the same species at the same location into a single record. Similarly, **clustering** records for the same species within a given distance of each other will reduce the number of overlapping buffer areas by replacing them with a single but larger contiguous area. Whilst these processes can be done manually in a GIS application it can be tedious, repetitive and prone to user error. The ideal solution therefore is a tool that performs these tasks in an automated way.
 
-The Data Buffer tool was originally developed for Thames Valley Environmental Records Centre (TVERC) and implemented in MapInfo. It is available for use by other LERCs and, if required, a version could be developed for ArcGIS.
+The Data Buffer tool was originally developed for Thames Valley Environmental Records Centre (TVERC) and implemented in MapInfo. It is available for use by other LERCs and, if required, a version could be developed for ArcGIS or QGIS.
 
 .. raw:: latex
 
@@ -35,13 +35,13 @@ The Data Buffer tool is configurable in a flexible way according to the requirem
 
 	The Data Buffer tool interface
 
-GIS layers available for use by the tool must be loaded in the GIS application and must also be defined in the configuration document. Once the process is complete the combined output layer is save in the selected location and a log file is generated which records the steps of performed. The process is discussed in this document in more detail in the section on :doc:`using the tool <../execute/execute>`.
+GIS layers available for use by the tool must be loaded in the GIS application and must also be defined in the configuration document. Once the process is complete the combined output layer is saved in the selected location and a log file is generated which records the steps performed. The process is discussed in this document in more detail in the section on :doc:`running the tool <../execute/execute>`.
 
 .. raw:: latex
 
    \newpage
 
- The details of how to process each GIS layer included is done via a configuration document written in XML. Using this document the user can configure all the parts of the process, for example:
+The details of how to process each GIS layer included is done via a configuration document written in XML. Using this document the user can configure all the parts of the process, for example:
 
 * The name of each input layer when loaded in the GIS workspace.
 * The columns to include from each input layer in the combined output layer.
