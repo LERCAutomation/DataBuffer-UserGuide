@@ -436,7 +436,7 @@ Installation will begin after confirming you wish to install the tool on the dia
 	Installation begins after clicking 'Install Add-in'
 
 
-Once it is installed, it will become available to add to the ArcGIS interface as a button (see :ref: `CustomisingToolbarsArcGIS`).
+Once it is installed, it will become available to add to the ArcGIS interface as a button (see :ref:`CustomisingToolbarsArcGIS`).
 
 .. note::
 	In order for this process to work all running ArcMap sessions must be closed. The tool will not install or install incorrectly if there are copies of ArcMap running.
