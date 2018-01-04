@@ -16,7 +16,7 @@ Users
 This user guide assumes that users of the Data Buffer tool have:
 
 * General IT experience including the use of Microsoft Windows.
-* Experience in the use of a relevant GIS application supported by the tool (currently MapInfo), including selecting and querying features and attributes.
+* Experience in the use of a relevant GIS application supported by the tool (currently MapInfo and ArcGIS), including selecting and querying features and attributes.
 * An understanding of the datasets that are used by the Data Buffer tool.
 
 
@@ -84,7 +84,7 @@ Related community links:
 Acknowledgements
 ================
 
-Many thanks to Thames Valley Environmental Records Centre (TVERC) who have funded the development of the Data Buffer tool.
+Many thanks to Thames Valley Environmental Records Centre (TVERC) and Sussex Biological Records Centre (SxBRC) who have funded the development of the Data Buffer tool.
 
 
 .. raw:: latex
