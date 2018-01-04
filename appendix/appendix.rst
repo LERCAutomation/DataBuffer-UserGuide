@@ -3,10 +3,10 @@ Appendix
 ********
 
 .. index::
-	single: Example XML file 
+	single: Example XML file; MapInfo 
 
-Example XML file
-================
+Example XML file  for MapInfo
+=============================
 
 Below is an example of XML that might be used to set up the Data Buffer tool for MapInfo. Note, many of the settings have been included for illustration only and it is up to each user or LERC to ensure the system is configured to their requirements.
 
@@ -322,6 +322,353 @@ Below is an example of XML that might be used to set up the Data Buffer tool for
     </DataBuffer>
     </configuration>
 
+
+.. raw:: latex
+  
+  \newpage
+
+.. index::
+  single: Example XML file; ArcGIS 
+
+Example XML file  for ArcGIS
+============================
+
+Below is an example of XML that might be used to set up the Data Buffer tool for ArcGIS. Note, many of the settings have been included for illustration only and it is up to each user or LERC to ensure the system is configured to their requirements.
+
+::
+
+  <?xml version="1.0" encoding="utf-8"?>
+
+  <!--
+  WARNING: This file should be changed carefully and a backup should be
+  taken before any changes so that they can be backed out.  Changed lines
+  can also be commented out as below.
+  -->
+
+  <!--
+  This config file contains all the variables used by the DataBuffer
+  ArcGIS tool.
+
+  The 'configuration' node is the 'root' node and signifies the start of the
+  contents of the configuration file.
+
+  The 'DataBuffer' node contains all of the entries relating to the
+  MapBasic tool variables.
+
+  Each entry relates to a file, folder, table name, column name or variable
+  used by the MapBasic tool to buffer and combine data for the buffered species
+  layers.
+  -->
+
+  <configuration>
+  <DataBuffer>
+
+    <!-- The existing file location where log files will be saved with output messages -->
+    <LogFilePath>
+    <value>H:\Dev\LERCAutomation\DataBuffer---ArcObjects\Logs</value>
+    </LogFilePath>
+
+    <!-- Shall we clear the log file by default? Yes/No -->
+    <DefaultClearLogFile>
+      <value>Yes</value>
+    </DefaultClearLogFile>
+
+    <!-- The existing file location where the new GIS layer will be created -->
+    <DefaultPath>
+    <value>H:\Dev\LERCAutomation\DataBuffer---ArcObjects\Data</value>
+    </DefaultPath>
+
+    <TempFilePath>
+      <value>C:\Temp</value>
+    </TempFilePath>
+
+    <LayerPath>
+      <value>H:\Dev\LERCAutomation\DataBuffer---ArcObjects\LayerFiles</value>
+    </LayerPath>
+
+    
+    <!-- The names and local names of the GIS layers to be processed -->
+    <InLayers>
+    <Badgers>
+      <LayerName> <!-- Case sensitive! -->
+        <Value>Badgers</Value>
+      </LayerName>
+      <Columns>
+        <Value>CommonName, SciName, RecYear, GridRef, Location, Design, Version, Origin, Provider, "Provided by TVERC - for internal use only. No part of this information can be distributed or published without permission. Contains copyrighted and sensitive information" "Copyright"</Value>
+      </Columns>
+      <WhereClause>
+        <value>RecYear &gt; (EXTRACT(YEAR FROM CURRENT_DATE) - 11)</value> <!-- for e.g. years: RecYear >= (EXTRACT(YEAR FROM CURRENT_DATE) - 11) -->
+      </WhereClause>
+      <BufferSize>
+        <Value>100</Value>
+      </BufferSize>
+      <DissolveSize>
+        <Value>100</Value>
+      </DissolveSize>
+    </Badgers>
+    <BarnOwls>
+      <LayerName>
+        <Value>Barn_Owls</Value>
+      </LayerName>
+      <Columns>
+        <Value>CommonName, SciName, RecYear, GridRef, Location, Design, Version, Origin, Provider, "Provided by TVERC - for internal use only. No part of this information can be distributed or published without permission. Contains copyrighted and sensitive information" "Copyright"</Value>
+      </Columns>
+      <WhereClause>
+        <value>RecYear &gt; (EXTRACT(YEAR FROM CURRENT_DATE) - 11)</value>
+      </WhereClause>
+      <BufferSize>
+        <Value>100</Value>
+      </BufferSize>
+      <DissolveSize>
+        <Value>0</Value>
+      </DissolveSize>
+    </BarnOwls>
+    <Bats>
+      <LayerName>
+        <Value>Bats</Value>
+      </LayerName>
+      <Columns>
+        <Value>CommonName, SciName, RecYear, GridRef, Location, Design, Version, Origin, Provider, "Provided by TVERC - for internal use only. No part of this information can be distributed or published without permission. Contains copyrighted and sensitive information" "Copyright"</Value>
+      </Columns>
+      <WhereClause>
+        <value>RecYear &gt; (EXTRACT(YEAR FROM CURRENT_DATE) - 11)</value>
+      </WhereClause>
+      <BufferSize>
+        <Value>100</Value>
+      </BufferSize>
+      <DissolveSize>
+        <Value>0</Value>
+      </DissolveSize>
+    </Bats>
+    <Dormice>
+      <LayerName>
+        <Value>Dormice</Value>
+      </LayerName>
+      <Columns>
+        <Value>CommonName, SciName, RecYear, GridRef, Location, Design, Version, Origin, Provider, "Provided by TVERC - for internal use only. No part of this information can be distributed or published without permission. Contains copyrighted and sensitive information" "Copyright"</Value>
+      </Columns>
+      <WhereClause>
+        <value>RecYear &gt; (EXTRACT(YEAR FROM CURRENT_DATE) - 11)</value>
+      </WhereClause>
+      <BufferSize>
+        <Value>100</Value>
+      </BufferSize>
+      <DissolveSize>
+        <Value>100</Value>
+      </DissolveSize>
+    </Dormice>
+    <GCNs>
+      <LayerName>
+        <Value>GCNs</Value>
+      </LayerName>
+      <Columns>
+        <Value>CommonName, SciName, RecYear, GridRef, Location, Design, Version, Origin, Provider, "Provided by TVERC - for internal use only. No part of this information can be distributed or published without permission. Contains copyrighted and sensitive information" "Copyright"</Value>
+      </Columns>
+      <WhereClause>
+        <value>RecYear &gt; (EXTRACT(YEAR FROM CURRENT_DATE) - 11)</value>
+      </WhereClause>
+      <BufferSize>
+        <Value>100</Value>
+      </BufferSize>
+      <DissolveSize>
+        <Value>0</Value>
+      </DissolveSize>
+    </GCNs>
+    <WaterVoles>
+      <LayerName>
+        <Value>Water_Voles</Value>
+      </LayerName>
+      <Columns>
+        <Value>CommonName, SciName, RecYear, GridRef, Location, Design, Version, Origin, Provider, "Provided by TVERC - for internal use only. No part of this information can be distributed or published without permission. Contains copyrighted and sensitive information" "Copyright"</Value>
+      </Columns>
+      <WhereClause>
+        <value>RecYear &gt; (EXTRACT(YEAR FROM CURRENT_DATE) - 11)</value>
+      </WhereClause>
+      <BufferSize>
+        <Value>20</Value>
+      </BufferSize>
+      <DissolveSize>
+        <Value>20</Value>
+      </DissolveSize>
+    </WaterVoles>
+    <WaterVolesRivers>
+      <LayerName>
+        <Value>Water_Voles_Rivers</Value>
+      </LayerName>
+      <Columns> <!-- Please do not use commas in your strings -->
+        <Value>Common_Nam "CommonName", Scientific "SciName", YearNum "RecYear", GridRef, Location, "UK_Legislation; Priority_NERC_S41" "Design", Version_Da "Version", Data_Origi "Origin", "TVERC" "Provider", "Provided by TVERC - for internal use only. No part of this information can be distributed or published without permission. Contains copyrighted and sensitive information" "Copyright"</Value>
+      </Columns>
+      <WhereClause>
+        <value>YearNum &gt; (EXTRACT(YEAR FROM CURRENT_DATE) - 11)</value>
+      </WhereClause>
+      <BufferSize>
+        <Value>10</Value>
+      </BufferSize>
+      <DissolveSize>
+        <Value>10</Value>
+      </DissolveSize>
+    </WaterVolesRivers>
+    </InLayers>
+
+    <!-- The details of the new GIS layer to be created -->
+    <OutLayer>
+      <!-- The output format for the buffer layer -->
+      <!-- Use Shape (Shapefile) or GDB (file Geodatabase) -->
+      <OutputFormat>
+        <value>Shape</value> 
+      </OutputFormat>
+      <!-- The symbology to apply to the new GIS layer -->
+    <LayerFile>
+      <value>test.lyr</value>
+    </LayerFile>
+    <!-- The columns in the new GIS layer and how they will be created -->
+    <!-- Valid column types are  "key", "cluster", "first", "common", "min", "max", "range" -->
+    <Columns>
+      <Col1>
+        <ColumnName>
+          <value>CommonName</value>
+        </ColumnName>
+        <ColumnType>
+          <value>Key</value>
+        </ColumnType>
+        <FieldType>
+          <value>TEXT</value>
+        </FieldType> <!-- "TEXT", "FLOAT", "DOUBLE", "SHORT", "LONG", "DATE" -->
+        <ColumnLength>
+          <value>100</value>
+        </ColumnLength>
+      </Col1>
+      <Col2>
+        <ColumnName>
+          <value>SciName</value>
+        </ColumnName>
+        <ColumnType>
+          <value>Key</value>
+        </ColumnType>
+        <FieldType>
+          <value>TEXT</value>
+        </FieldType> <!-- "TEXT", "FLOAT", "DOUBLE", "SHORT", "LONG", "DATE" -->
+        <ColumnLength>
+          <value>100</value>
+        </ColumnLength>
+      </Col2>
+      <Col3>
+        <ColumnName>
+          <value>RecYear</value>
+        </ColumnName>
+        <ColumnType>
+          <value>Range</value>
+        </ColumnType>
+        <FieldType>
+          <value>TEXT</value>
+        </FieldType>
+        <ColumnLength>
+          <value>11</value>
+        </ColumnLength>
+      </Col3>
+      <Col4>
+        <ColumnName>
+          <value>GridRef</value>
+        </ColumnName>
+        <ColumnType>
+          <value>Cluster</value>
+        </ColumnType>
+        <FieldType>
+          <value>TEXT</value>
+        </FieldType>
+        <ColumnLength>
+          <value>12</value>
+        </ColumnLength>
+      </Col4>
+      <Col5>
+        <ColumnName>
+          <value>Location</value>
+        </ColumnName>
+        <ColumnType>
+          <value>Common</value>
+        </ColumnType>
+        <FieldType>
+          <value>TEXT</value>
+        </FieldType>
+        <ColumnLength>
+          <value>100</value>
+        </ColumnLength>
+      </Col5>
+      <Col6>
+        <ColumnName>
+          <value>Design</value>
+        </ColumnName>
+        <ColumnType>
+          <value>First</value>
+        </ColumnType>
+        <FieldType>
+          <value>TEXT</value>
+        </FieldType>
+        <ColumnLength>
+          <value>100</value>
+        </ColumnLength>
+      </Col6>
+      <Col7>
+        <ColumnName>
+          <value>Version</value>
+        </ColumnName>
+        <ColumnType>
+          <value>First</value>
+        </ColumnType>
+        <FieldType>
+          <value>TEXT</value>
+        </FieldType>
+        <ColumnLength>
+          <value>100</value>
+        </ColumnLength>
+      </Col7>
+      <Col8>
+        <ColumnName>
+          <value>Origin</value>
+        </ColumnName>
+        <ColumnType>
+          <value>Common</value>
+        </ColumnType>
+        <FieldType>
+          <value>TEXT</value>
+        </FieldType>
+        <ColumnLength>
+          <value>100</value>
+        </ColumnLength>
+      </Col8>
+      <Col9>
+        <ColumnName>
+          <value>Provider</value>
+        </ColumnName>
+        <ColumnType>
+          <value>First</value>
+        </ColumnType>
+        <FieldType>
+          <value>TEXT</value>
+        </FieldType>
+        <ColumnLength>
+          <value>100</value>
+        </ColumnLength>
+      </Col9>
+      <Col10>
+        <ColumnName>
+          <value>Copyright</value>
+        </ColumnName>
+        <ColumnType>
+          <value>First</value>
+        </ColumnType>
+        <FieldType>
+          <value>TEXT</value>
+        </FieldType>
+        <ColumnLength>
+          <value>255</value>
+        </ColumnLength>
+      </Col10>
+    </Columns>
+    </OutLayer>
+
+  </DataBuffer>
+  </configuration>
 
 
 .. raw:: latex
