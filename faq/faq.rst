@@ -32,7 +32,7 @@ Operating the tool
 
 	- The table / GIS layer isn't loaded in the active workspace. In this case, a :ref:`message will pop up <figlaunchwarning>` before the form is shown telling you the layer isn't loaded. Add the layer to the workspace and the problem should be resolved.
 	- The table / GIS layer isn't listed in the XML configuration document. Please refer to the :doc:`setup <../setup/setup>` section and add it as a input layer.
-	- The table / GIS layer is listed in the XML configuration document, but the :ref:`TableName <intables>` is spelled incorrectly. Note that the name must follow the exact format of the name of the layer in the active workspace.
+	- The table / GIS layer is listed in the XML configuration document, but the :ref:`TableName <intables>` (MapInfo) or :ref:`LayerName <inlayers>` is spelled incorrectly. Note that the name must follow the exact format of the name of the layer in the active workspace.
 
 
 Tool issues

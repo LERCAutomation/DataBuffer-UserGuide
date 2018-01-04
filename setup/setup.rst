@@ -240,7 +240,7 @@ _`LayerPath`
 Input layer attributes for ArcGIS
 *********************************
 
-.. _InTablesArc:
+.. _InLayers:
 
 The details of all the input layers that can be included in the process are found within the ``<InLayers>`` node. For each GIS layer to be included in the process a new child node must be created. The node name (e.g. ``<Badgers>``) is a user-defined name used to identify an individual layer - it must be unique. This name is name of the layer as it will be shown in the tool interface, and can be different from the layer name as it is known in the ArcGIS Table of Contents (which will be set in a subsequent child node). A simple example of a map layer definition with limited attributes is shown in :numref:`figXMLExampleArc`.
 
