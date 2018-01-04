@@ -14,7 +14,7 @@ Supplying partner organisations with information relating to a smaller set of sp
 
 A simple idea is to reduce the number of multiple 'stacked' records by **combining** records for the same species at the same location into a single record. Similarly, **clustering** records for the same species within a given distance of each other will reduce the number of overlapping buffer areas by replacing them with a single but larger contiguous area. Whilst these processes can be done manually in a GIS application it can be tedious, repetitive and prone to user error. The ideal solution therefore is a tool that performs these tasks in an automated way.
 
-The Data Buffer tool was originally developed for Thames Valley Environmental Records Centre (TVERC) and implemented in MapInfo. It is available for use by other LERCs and, if required, a version could be developed for ArcGIS or QGIS.
+The Data Buffer tool was originally developed for Thames Valley Environmental Records Centre (TVERC) and implemented in MapInfo, and subsequently a version in ArcGIS was developed. It is available for use by other LERCs and, if required, a version could be developed for QGIS.
 
 .. raw:: latex
 

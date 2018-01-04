@@ -84,7 +84,7 @@ Related community links:
 Acknowledgements
 ================
 
-Many thanks to Thames Valley Environmental Records Centre (TVERC) and Sussex Biological Records Centre (SxBRC) who have funded the development of the Data Buffer tool.
+Many thanks to Thames Valley Environmental Records Centre (TVERC) who have funded the development of the Data Buffer tool.
 
 
 .. raw:: latex
