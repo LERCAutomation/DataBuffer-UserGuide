@@ -5,11 +5,11 @@
 Running the tool
 ****************
 
-As discussed in the :doc:`Setting up the tool <../setup/setup>` section, the Data Buffer tool is operated from a MapInfo workspace within which the GIS layers required to run the tool are already loaded. It also relies on the configuration document for setting up the tool. Therefore, before running the tool, ensure the following conditions are met:
+As discussed in the :doc:`Setting up the tool <../setup/setup>` section, the Data Buffer tool is operated from a MapInfo workspace or ArcGIS document within which the GIS layers required to run the tool are already loaded. It also relies on the configuration document for setting up the tool. Therefore, before running the tool, ensure the following conditions are met:
 
-- A MapInfo document has been created which contains any MapInfo GIS layers that may be included in the process. 
-- The XML configuration document has been set up correctly, both for general settings and for each individual layer that can be used for input. It is also named correctly and in the same directory as the tool MapBasic application (.MBX).
-- The Data Buffer tool has been installed and is loaded in MapInfo using the MapInfo Tool Manager.
+- A MapInfo or ArcGIS document has been created which contains any GIS layers that may be included in the process. 
+- The XML configuration document has been set up correctly, both for general settings and for each individual layer that can be used for input. It is also named correctly. If the tool is run from MapInfo the XML file must be in the same directory as the tool MapBasic application (.MBX).
+- The Data Buffer tool has been installed and is loaded in the GIS software.
 
 .. seealso::
 	Please refer to the :doc:`setup <../setup/setup>` section for further information about any of these requirements.
@@ -24,7 +24,7 @@ As discussed in the :doc:`Setting up the tool <../setup/setup>` section, the Dat
 Opening the form
 ================
 
-To open the Data Buffer tool, open the tool in the `Tools` menu (**Tools... -> Data Buffer**), as shown in :numref:`figRunBuffer`. 
+To open the Data Buffer tool inn MapInfo, open the tool in the `Tools` menu (**Tools... -> Data Buffer**), as shown in :numref:`figRunBuffer`. In ArcMap, open the Data Buffer tool by clicking on the tool button (:numref:`figRunBufferArc`).
 
 
 .. _figRunBuffer:
@@ -34,6 +34,13 @@ To open the Data Buffer tool, open the tool in the `Tools` menu (**Tools... -> D
 
 	Launching the Data Buffer tool (MapInfo)
 
+
+.. _figRunBufferArc:
+
+.. figure:: figures/RunBufferArc.png
+	:align: center
+
+	Launching the Data Buffer tool (ArcGIS)
 
 If there are any structural issues with the XML document, the tool will display a message that it has encountered an error, and not load any further. If any of the input layers that are listed in the configuration document are not present in the active workspace a warning will be shown (:numref:`figLaunchWarning`). The layers that are missing will not be loaded into the form and so cannot be included in the process.
 
@@ -87,14 +94,22 @@ The form can be used to process as many input layers as required into a single o
 
    \newpage
 
-Progress is shown in a progress window (:numref:`figProgress`).
+Progress is shown in a progress window in MapInfo (:numref:`figProgress`), and as a series of status messages in ArcMap (:numref:`figProgressArc`).
 
 .. _figProgress:
 
 .. figure:: figures/BufferProcessing.png
 	:align: center
 
-	Progress window during the process
+	Progress window during the process (MapInfo)
+
+
+.. _figProgressArc:
+
+.. figure:: figures/BufferProcessingArc.png
+	:align: center
+
+	Progress window during the process (ArcGIS)
 
 
 .. raw:: latex

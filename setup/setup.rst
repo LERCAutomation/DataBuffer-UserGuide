@@ -213,7 +213,7 @@ Setup for ArcGIS
 General attributes for ArcGIS
 *****************************
 
-The first section of the configuration file deals with a series of general attributes for the Data Buffer tool. Each node specifies where files will be saved, where the log file will be saved as well as other overall settings. Details on these attributes (and their typical values where known) are outlined below. The list follows the order within which the attributes are found in the configuration file. This version of the configuration details is valid for the ArcGIS version 1.0 of the Data Buffer tool.
+The first section of the configuration file deals with a series of general attributes for the Data Buffer tool. Each node specifies where files will be saved, where the log file will be saved as well as other overall settings. Details on these attributes (and their typical values where known) are outlined below. The list follows the order within which the attributes are found in the configuration file. This version of the configuration details is valid for the ArcGIS version 1.1 of the Data Buffer tool.
 
 
 _`LogFilePath` 	
@@ -470,7 +470,7 @@ If the Data Buffer tool is not shown, use the **Options** tab to add the folder 
 
 	The 'Options' tab in the ArcGIS Add-In Manager
 
-Once the tool shows in the Add-In Manager (:numref:`figAddInManager`), it is available to add to the ArcGIS interface as a button (see `CustomisingToolbarsArcGIS`_).
+Once the tool shows in the Add-In Manager (:numref:`figAddInManager`), it is available to add to the ArcGIS interface as a button (see :ref:`CustomisingToolbarsArcGIS`).
 
 .. _figAddInManager:
 
@@ -554,7 +554,7 @@ Once a new toolbar is created and named, it is automatically added to the ArcMap
 
    \newpage
 
-As a final step the Data Buffer tool is added to the toolbar. This is done from the **Command** tab in the Customize dialog (:numref:`figAddInCommands`). Click on **Add-In Controls** and the Data Searches tool will be shown in the right-hand panel.
+As a final step the Data Buffer tool is added to the toolbar. This is done from the **Command** tab in the Customize dialog (:numref:`figAddInCommands`). Click on **Add-In Controls** and the Data Buffer tool will be shown in the right-hand panel.
 
 .. _figAddInCommands:
 
@@ -568,7 +568,7 @@ As a final step the Data Buffer tool is added to the toolbar. This is done from 
 
    \newpage
 
-To add the tool to the toolbar, simply drag and drop it onto it (:numref:`figDragDropTool`). Close the Customize dialog and **save the document**. The Data Searches tool is now ready for its final configuration and first use.
+To add the tool to the toolbar, simply drag and drop it onto it (:numref:`figDragDropTool`). Close the Customize dialog and **save the document**. The Data Buffer tool is now ready for its final configuration and first use.
 
 .. _figDragDropTool:
 
