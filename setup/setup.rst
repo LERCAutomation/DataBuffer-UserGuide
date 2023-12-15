@@ -216,13 +216,13 @@ General attributes for ArcGIS
 The first section of the configuration file deals with a series of general attributes for the Data Buffer tool. Each node specifies where files will be saved, where the log file will be saved as well as other overall settings. Details on these attributes (and their typical values where known) are outlined below. The list follows the order within which the attributes are found in the configuration file. This version of the configuration details is valid for the ArcGIS version 1.1 of the Data Buffer tool.
 
 
-_`LogFilePath` 	
+`LogFilePath` 	
 	The folder to be used for storing log files. This folder must already exist.
 
 _`DefaultClearLogFile`
 	A Yes/No attribute specifying whether the 'clear log file' check box on the menu should be checked (Yes) or unchecked (No) when the menu opens.
 
-_`DefaultPath`
+`DefaultPath`
 	The default folder where output GIS layers will be stored. This can be overridden by the user when executing the tool.
 
 _`TempFilePath`

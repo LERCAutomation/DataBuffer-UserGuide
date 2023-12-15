@@ -162,4 +162,4 @@ The output records are saved in the GIS layer specified by the user when the too
 
 	Example output layer
 
-The log file results of the process is saved in the :ref:`LogFilePath <logfilepath>` folder as specified in the XML configuration document.
+The log file results of the process is saved in the logfilepath folder as specified in the XML configuration document.
